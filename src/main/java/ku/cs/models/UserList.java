@@ -47,7 +47,7 @@ public class UserList {
     public User login(String username, String password) {
         User user = findUserByUsername(username);
         if (user != null) {
-            if (user.getPassword().equals(password)) {
+            if (user.validatePassword(password)) {
                 return user;
             } else {
                 return null;

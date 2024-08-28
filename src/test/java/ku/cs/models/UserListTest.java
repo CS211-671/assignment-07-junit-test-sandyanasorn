@@ -49,8 +49,7 @@ class UserListTest {
         // TODO: call login() with correct username and password
         User actual = userList.login("a", "1");
         // TODO: assert that User object is found
-        User user = userList.login("a", "1");
-        String expected = "a";
+        User expected = userList.findUserByUsername("a");
         assertEquals(expected, actual);
     }
 
